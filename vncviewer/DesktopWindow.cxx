@@ -810,6 +810,7 @@ int DesktopWindow::handle(int event)
       if (keyboardGrabbed)
           grabPointer();
   case FL_LEAVE:
+      ungrabKeyboard();
   case FL_DRAG:
   case FL_MOVE:
     // We don't get FL_LEAVE with a grabbed pointer, so check manually
@@ -866,7 +867,7 @@ int DesktopWindow::fltkDispatch(int event, Fl_Window *win)
     // all monitors and the user clicked on another application.
     // Make sure we update our grabs with the focus changes.
     case FL_FOCUS:
-      dw->maybeGrabKeyboard();
+      dw->grabKeyboard();
       break;
     case FL_UNFOCUS:
       if (fullscreenSystemKeys) {

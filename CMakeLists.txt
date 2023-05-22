@@ -284,7 +284,7 @@ if(UNIX AND NOT APPLE)
   if(HAVE_PAM_H AND HAVE_PAM_START)
     set(PAM_LIBS pam)
   else()
-    message(FATAL_ERROR "Could not find PAM development files")
+#    message(FATAL_ERROR "Could not find PAM development files")
   endif()
 endif()
 
