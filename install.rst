@@ -9,7 +9,7 @@ sudo apt install build-essential cmake libx11-dev   libpixman-1-dev   libjpeg-de
 
 repo clone and build:
 ```
-git clone 
+git clone https://github.com/benoit-bertholon/tigervnc.git
 cd tigervnc
 cmake -G "Unix Makefiles"
 cd vncviewer/
