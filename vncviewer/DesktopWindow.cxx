@@ -807,6 +807,7 @@ int DesktopWindow::handle(int event)
     break;
 
   case FL_ENTER:
+      grabKeyboard();
       if (keyboardGrabbed)
           grabPointer();
   case FL_LEAVE:
